@@ -3,14 +3,14 @@ import '../styles/Chatbox.css'
 
 async function handleSubmit(message) {
     console.log("Message: " + message)
-    // const response = await fetch('/chat', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(message)
-    // })
-    // return response.json()
+    const response = await fetch('/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({message:message})
+    })
+    return response.json()
 } 
 
 
