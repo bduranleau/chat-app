@@ -8,7 +8,6 @@ function App() {
   const [isConnected, setIsConnected ] = useState(socket.connected)
 
   useEffect(() => {
-    socket.emit('message', {message: 'foo'})
     socket.on('connect', () => {
       setIsConnected(true)
     })
@@ -29,7 +28,7 @@ function App() {
         <div className='root-container'>
           <p>Connected: { '' + isConnected }</p>
           <Navbar />
-          <Main />
+          <Main socket={socket}/>
         </div>
       </header>
     </div>

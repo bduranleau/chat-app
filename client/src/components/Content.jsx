@@ -1,10 +1,10 @@
 import Chat from "./Chat"
 import "../styles/Content.css"
 
-function Content() {
+function Content({socket}) {
     return (
         <div className="Content">
-            <Chat />
+            <Chat socket={socket}/>
         </div>
     )
 }

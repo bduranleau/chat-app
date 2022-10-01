@@ -45,7 +45,12 @@ io.on('connection', (socket) => {
         
     // message
     socket.on('message', (msg) => {
-        console.log('message: ' + msg.message)
+        console.log('message: ' + msg)
+    })
+
+    // retrieve conversation history
+    socket.on('get-conversation', () => {
+        console.log('conversation history requested')
     })
 
     // join room

@@ -2,11 +2,11 @@ import Conversation from './Conversation'
 import Chatbox from './Chatbox'
 import '../styles/Chat.css'
 
-function Chat() {
+function Chat({socket}) {
     return (
         <div className='Chat'>
-            <Conversation />
-            <Chatbox />
+            <Conversation socket={socket}/>
+            <Chatbox socket={socket}/>
         </div>
     )
 }
