@@ -35,7 +35,8 @@ io.on('connection', (socket) => {
         
     // message
     socket.on('message', (msg) => {
-        console.log('message: ' + msg)
+        console.log('message: ' + msg.text)
+        io.emit('message', msg)
     })
 
     // retrieve conversation history
