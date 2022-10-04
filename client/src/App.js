@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className='root-container'>
-          <p>Connected: { '' + isConnected }</p>
+          <span>Connected: { '' + isConnected }</span>
           <Navbar />
           <Main socket={socket}/>
         </div>
