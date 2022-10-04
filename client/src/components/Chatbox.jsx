@@ -20,6 +20,10 @@ function Chatbox({socket}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (message.trim() === '')
+        {
+            return;
+        }
         socket.emit('message', newMessage(message))
         setMessage('')
     }
